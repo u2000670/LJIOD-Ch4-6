@@ -16,6 +16,7 @@ public class MembershipManagement {
                         throw new InputMismatchException();
                 reader.nextLine();
             } catch (InputMismatchException e) {
+                reader.nextLine();
                 System.out.println("***********Invalid Input***********\n");
                 System.out.print("ERROR: INVALID INPUT. Please try again: ");
             }
@@ -129,7 +130,7 @@ public class MembershipManagement {
         for (int i = 0; i < m.size(); i++) {
             if(m.get(i).getMemberID()== memberID){
                 String[] memberInfo = m.get(i).toString().split(", ");
-                if (memberInfo[0].equals('S')){
+                if (memberInfo[0].equals("S")){
                     System.out.println("Member Type = S");
                     System.out.println("Member ID = "+memberInfo[1]);
                     System.out.println("Member Name = "+memberInfo[2]);
